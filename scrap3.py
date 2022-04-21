@@ -32,15 +32,13 @@ for h in soup.findAll('h5'):
             
             #añadir la url a la lista de salida
             urls.append(url)
-            
+           
             
     #si la lista no tiene una etiqueta de anclaje
     #o una etiqueta de anclaje no tiene un parámetro href pasamos
     except:
         pass
     
-
-
-#imprimir todas las urls almacenadas en la lista de urls
-for url in urls:
-    print(url)
+#imprimir todas las urls almacenadas en la lista de urls, con set para evitar duplicados
+for url in set(urls):
+     print(url)
